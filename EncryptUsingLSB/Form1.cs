@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Text;
@@ -68,25 +67,6 @@ namespace EncryptUsingLSB
                 sb.Append(Convert.ToString(c, 2).PadLeft(8, '0'));
             }
             return sb.ToString();
-        }
-
-        public static string BinaryToString(string binary)
-        {
-            try
-            {
-                List<Byte> byteList = new List<Byte>();
-
-                for (int i = 0; i < binary.Length; i += 8)
-                {
-                    byteList.Add(Convert.ToByte(binary.Substring(i, 8), 2));
-                }
-                return Encoding.ASCII.GetString(byteList.ToArray());
-            }
-            catch
-            {
-                MessageBox.Show("Invalid binary string.");
-                return string.Empty;
-            }
         }
 
         private void Encrypt(string message)
