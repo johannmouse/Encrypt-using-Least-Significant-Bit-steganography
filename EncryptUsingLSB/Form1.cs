@@ -85,20 +85,20 @@ namespace EncryptUsingLSB
             }
             bmpWork = bmp;
             int index = 0;
-            int row = 0, collumn = 0;
+            int row = 0, column = 0;
             StringBuilder redCode = new StringBuilder();
             while (index != binaryCode.Length)
             {
-                Color color = bmpWork.GetPixel(collumn, row);
+                Color color = bmpWork.GetPixel(column, row);
                 redCode.Clear();
                 redCode.Append(Convert.ToString(color.R, 2).PadLeft(8, '0'));
                 redCode.Remove(7, 1).Append(binaryCode[index]);
-                bmpWork.SetPixel(collumn, row, Color.FromArgb(Convert.ToInt32(redCode.ToString(), 2), color.G, color.B));
+                bmpWork.SetPixel(column, row, Color.FromArgb(Convert.ToInt32(redCode.ToString(), 2), color.G, color.B));
                 index++;
-                collumn++;
-                if (collumn == bmpWork.Width)
+                column++;
+                if (column == bmpWork.Width)
                 {
-                    collumn = 0;
+                    column = 0;
                     row++;
                 }
             }
