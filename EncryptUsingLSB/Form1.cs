@@ -89,11 +89,11 @@ namespace EncryptUsingLSB
             StringBuilder redCode = new StringBuilder();
             while (index != binaryCode.Length)
             {
-                Color color = bmpWork.GetPixel(row, collumn);
+                Color color = bmpWork.GetPixel(collumn, row);
                 redCode.Clear();
                 redCode.Append(Convert.ToString(color.R, 2).PadLeft(8, '0'));
                 redCode.Remove(7, 1).Append(binaryCode[index]);
-                bmpWork.SetPixel(row, collumn, Color.FromArgb(Convert.ToInt32(redCode.ToString(), 2), color.G, color.B));
+                bmpWork.SetPixel(collumn, row, Color.FromArgb(Convert.ToInt32(redCode.ToString(), 2), color.G, color.B));
                 index++;
                 collumn++;
                 if (collumn == bmpWork.Width)
