@@ -61,7 +61,7 @@
             // 
             // richTextBoxMessage
             // 
-            this.richTextBoxMessage.Location = new System.Drawing.Point(47, 432);
+            this.richTextBoxMessage.Location = new System.Drawing.Point(47, 412);
             this.richTextBoxMessage.Name = "richTextBoxMessage";
             this.richTextBoxMessage.Size = new System.Drawing.Size(749, 281);
             this.richTextBoxMessage.TabIndex = 3;
@@ -110,7 +110,7 @@
             this.buttonR.BackColor = System.Drawing.Color.White;
             this.buttonR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonR.ForeColor = System.Drawing.Color.Red;
-            this.buttonR.Location = new System.Drawing.Point(47, 411);
+            this.buttonR.Location = new System.Drawing.Point(47, 391);
             this.buttonR.Name = "buttonR";
             this.buttonR.Size = new System.Drawing.Size(75, 23);
             this.buttonR.TabIndex = 9;
@@ -123,7 +123,7 @@
             this.buttonG.BackColor = System.Drawing.Color.White;
             this.buttonG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonG.ForeColor = System.Drawing.Color.Green;
-            this.buttonG.Location = new System.Drawing.Point(121, 411);
+            this.buttonG.Location = new System.Drawing.Point(121, 391);
             this.buttonG.Name = "buttonG";
             this.buttonG.Size = new System.Drawing.Size(75, 23);
             this.buttonG.TabIndex = 10;
@@ -136,7 +136,7 @@
             this.buttonB.BackColor = System.Drawing.Color.White;
             this.buttonB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonB.ForeColor = System.Drawing.Color.Blue;
-            this.buttonB.Location = new System.Drawing.Point(195, 411);
+            this.buttonB.Location = new System.Drawing.Point(195, 391);
             this.buttonB.Name = "buttonB";
             this.buttonB.Size = new System.Drawing.Size(75, 23);
             this.buttonB.TabIndex = 11;
@@ -148,7 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(840, 741);
+            this.ClientSize = new System.Drawing.Size(840, 710);
             this.Controls.Add(this.buttonB);
             this.Controls.Add(this.buttonG);
             this.Controls.Add(this.buttonR);

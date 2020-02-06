@@ -89,8 +89,23 @@ namespace EncryptUsingLSB
         private void Encrypt(string R_text, string G_text, string B_text)
         {
             string binary_R = StringToBinary(R_text);
+            int binaryLengh_R = binary_R.Length;
+            string numberOfDigit_R = CalculateNumberOfDigit(binaryLengh_R);
+            string head_R = StringToBinary(binaryLengh_R.ToString());
+            binary_R = numberOfDigit_R + head_R + binary_R;
+
             string binary_G = StringToBinary(G_text);
+            int binaryLengh_G = binary_G.Length;
+            string numberOfDigit_G = CalculateNumberOfDigit(binaryLengh_G);
+            string head_G = StringToBinary(binaryLengh_G.ToString());
+            binary_G = numberOfDigit_G + head_G + binary_G;
+
             string binary_B = StringToBinary(B_text);
+            int binaryLengh_B = binary_B.Length;
+            string numberOfDigit_B = CalculateNumberOfDigit(binaryLengh_B);
+            string head_B = StringToBinary(binaryLengh_B.ToString());
+            binary_B = numberOfDigit_B + head_B + binary_B;
+
             int longestMessage = MaxNum(binary_R.Length, binary_G.Length, binary_B.Length);
             if (longestMessage > bmp.Width * bmp.Height)
             {
@@ -183,6 +198,18 @@ namespace EncryptUsingLSB
                 bmpResize = bmp;
             }
             pictureBoxOutput.Image = bmpResize;
+        }
+        private string CalculateNumberOfDigit(int binaryLengh)
+        {
+            if (binaryLengh >= 10 && binaryLengh < 100) return StringToBinary("2");
+            else if (binaryLengh >= 100 && binaryLengh < 1000) return StringToBinary("3");
+            else if (binaryLengh >= 1000 && binaryLengh < 10000) return StringToBinary("4");
+            else if (binaryLengh >= 10000 && binaryLengh < 100000) return StringToBinary("5");
+            else if (binaryLengh >= 100000 && binaryLengh < 1000000) return StringToBinary("6");
+            else if (binaryLengh >= 1000000 && binaryLengh < 10000000) return StringToBinary("7");
+            else if (binaryLengh >= 10000000 && binaryLengh < 100000000) return StringToBinary("8");
+            else if (binaryLengh >= 100000000 && binaryLengh < 1000000000) return StringToBinary("9");
+            else return StringToBinary("1");
         }
         private int MaxNum(int num1, int num2, int num3)
         {
