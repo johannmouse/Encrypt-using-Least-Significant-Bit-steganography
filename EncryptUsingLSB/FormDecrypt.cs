@@ -90,19 +90,19 @@ namespace EncryptUsingLSB
         {
             string binary_R = StringToBinary(R_text);
             int binaryLengh_R = binary_R.Length;
-            string numberOfDigit_R = CalculateNumberOfDigit(binaryLengh_R);
+            string numberOfDigit_R = GetNumberOfDigit(binaryLengh_R);
             string head_R = StringToBinary(binaryLengh_R.ToString());
             binary_R = numberOfDigit_R + head_R + binary_R;
 
             string binary_G = StringToBinary(G_text);
             int binaryLengh_G = binary_G.Length;
-            string numberOfDigit_G = CalculateNumberOfDigit(binaryLengh_G);
+            string numberOfDigit_G = GetNumberOfDigit(binaryLengh_G);
             string head_G = StringToBinary(binaryLengh_G.ToString());
             binary_G = numberOfDigit_G + head_G + binary_G;
 
             string binary_B = StringToBinary(B_text);
             int binaryLengh_B = binary_B.Length;
-            string numberOfDigit_B = CalculateNumberOfDigit(binaryLengh_B);
+            string numberOfDigit_B = GetNumberOfDigit(binaryLengh_B);
             string head_B = StringToBinary(binaryLengh_B.ToString());
             binary_B = numberOfDigit_B + head_B + binary_B;
 
@@ -199,7 +199,7 @@ namespace EncryptUsingLSB
             }
             pictureBoxOutput.Image = bmpResize;
         }
-        private string CalculateNumberOfDigit(int binaryLengh)
+        private string GetNumberOfDigit(int binaryLengh)
         {
             if (binaryLengh >= 10 && binaryLengh < 100) return StringToBinary("2");
             else if (binaryLengh >= 100 && binaryLengh < 1000) return StringToBinary("3");
