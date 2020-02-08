@@ -245,6 +245,8 @@ namespace EncryptUsingLSB
                 buttonG.BackColor = Color.White;
                 buttonB.BackColor = Color.White;
                 currentPage = Page.R;
+                richTextBoxMessage.Focus();
+                richTextBoxMessage.Select(richTextBoxMessage.Text.Length, 0);
             }
         }
 
@@ -259,6 +261,8 @@ namespace EncryptUsingLSB
                 buttonG.BackColor = Color.LightGray;
                 buttonB.BackColor = Color.White;
                 currentPage = Page.G;
+                richTextBoxMessage.Focus();
+                richTextBoxMessage.Select(richTextBoxMessage.Text.Length, 0);
             }
         }
 
@@ -273,6 +277,8 @@ namespace EncryptUsingLSB
                 buttonG.BackColor = Color.White;
                 buttonB.BackColor = Color.LightGray;
                 currentPage = Page.B;
+                richTextBoxMessage.Focus();
+                richTextBoxMessage.Select(richTextBoxMessage.Text.Length, 0);
             }
         }
 
