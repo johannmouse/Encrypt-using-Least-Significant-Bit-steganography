@@ -28,32 +28,6 @@ namespace EncryptUsingLSB
             buttonR.BackColor = Color.LightGray;
         }
 
-        private void Browse(object sender, EventArgs e)
-        {
-            OpenFileDialog open = new OpenFileDialog
-            {
-                Filter = "Image Files(*.jpg; .jpeg; .gif; .bmp; .png)|*.jpg; .jpeg; .gif; *.bmp ;*.png"
-            };
-            if (open.ShowDialog() == DialogResult.OK)
-            {
-                bmp = new Bitmap(new Bitmap(open.FileName));
-                if (bmp.Width <= bmp.Height && bmp.Height >= 300)
-                {
-                    bmpResize = new Bitmap(bmp, (int)(bmp.Width / ((float)bmp.Height / 300)), 300);
-                }
-                else if (bmp.Width > bmp.Height && bmp.Width >= 300)
-                {
-                    bmpResize = new Bitmap(bmp, 300, (int)(bmp.Height / ((float)bmp.Width / 300)));
-                }
-                else
-                {
-                    bmpResize = bmp;
-                }
-                pictureBoxInput.Image = bmpResize;
-                textBoxPath.Text = open.FileName;
-            }
-        }
-
         private void Generate(object sender, EventArgs e)
         {
             if (bmp == null)
@@ -297,6 +271,31 @@ namespace EncryptUsingLSB
                 buttonG.BackColor = Color.White;
                 buttonB.BackColor = Color.LightGray;
                 currentPage = Page.B;
+            }
+        }
+
+        private void Browse(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog
+            {
+                Filter = "Image Files(*.jpg; .jpeg; .gif; .bmp; .png)|*.jpg; .jpeg; .gif; *.bmp ;*.png"
+            };
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                bmp = new Bitmap(new Bitmap(open.FileName));
+                if (bmp.Width <= bmp.Height && bmp.Height >= 300)
+                {
+                    bmpResize = new Bitmap(bmp, (int)(bmp.Width / ((float)bmp.Height / 300)), 300);
+                }
+                else if (bmp.Width > bmp.Height && bmp.Width >= 300)
+                {
+                    bmpResize = new Bitmap(bmp, 300, (int)(bmp.Height / ((float)bmp.Width / 300)));
+                }
+                else
+                {
+                    bmpResize = bmp;
+                }
+                pictureBoxInput.Image = bmpResize;
             }
         }
     }
