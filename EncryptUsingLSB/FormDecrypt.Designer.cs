@@ -36,7 +36,7 @@
             this.buttonR = new System.Windows.Forms.Button();
             this.buttonG = new System.Windows.Forms.Button();
             this.buttonB = new System.Windows.Forms.Button();
-            this.labelMark = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOutput)).BeginInit();
             this.SuspendLayout();
@@ -127,21 +127,23 @@
             this.buttonB.UseVisualStyleBackColor = false;
             this.buttonB.Click += new System.EventHandler(this.View_B);
             // 
-            // labelMark
+            // linkLabel1
             // 
-            this.labelMark.AutoSize = true;
-            this.labelMark.Location = new System.Drawing.Point(690, 634);
-            this.labelMark.Name = "labelMark";
-            this.labelMark.Size = new System.Drawing.Size(106, 13);
-            this.labelMark.TabIndex = 12;
-            this.labelMark.Text = "By: Tran Quang Vinh";
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(690, 634);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(106, 13);
+            this.linkLabel1.TabIndex = 12;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "By: Tran Quang Vinh";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Direct);
             // 
             // FormEncrypt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 656);
-            this.Controls.Add(this.labelMark);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.buttonB);
             this.Controls.Add(this.buttonG);
             this.Controls.Add(this.buttonR);
@@ -170,7 +172,7 @@
         private System.Windows.Forms.Button buttonR;
         private System.Windows.Forms.Button buttonG;
         private System.Windows.Forms.Button buttonB;
-        private System.Windows.Forms.Label labelMark;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 
